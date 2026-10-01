@@ -1,31 +1,168 @@
-// Button on Home Section
+/* =========================================
+   CALICUT FC
+   JAVASCRIPT
+========================================= */
 
-function showMessage() {
-    alert("Hello! Welcome to my website.");
-}
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+});
 
 
-// Contact Form
+/* Close mobile menu after clicking a link */
 
-function submitForm(event) {
+document.querySelectorAll(".nav-links a").forEach(link => {
 
-    // Prevent page from refreshing
-    event.preventDefault();
+    link.addEventListener("click", () => {
 
-    // Get form values
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
+        navLinks.classList.remove("active");
 
-    // Check if fields are filled
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
-        return;
+    });
+
+});
+
+
+/* =========================================
+   COUNTER ANIMATION
+========================================= */
+
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const counter = entry.target;
+
+                const target =
+                    Number(counter.getAttribute("data-target"));
+
+                let current = 0;
+
+                const speed = 40;
+
+                const updateCounter = () => {
+
+                    if (current < target) {
+
+                        current++;
+
+                        counter.textContent = current;
+
+                        setTimeout(updateCounter, speed);
+
+                    } else {
+
+                        counter.textContent = target;
+
+                    }
+
+                };
+
+                updateCounter();
+
+                observer.unobserve(counter);
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.5
     }
 
-    // Show success message
-    alert("Thank you, " + name + "! Your message has been submitted.");
+);
 
-    // Clear the form
-    document.querySelector("form").reset();
-}
+counters.forEach(counter => {
+
+    observer.observe(counter);
+
+});
+
+
+/* =========================================
+   NAVBAR SCROLL EFFECT
+========================================= */
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 50) {
+
+        navbar.style.background =
+            "rgba(3, 8, 18, 0.95)";
+
+    } else {
+
+        navbar.style.background =
+            "rgba(5, 11, 24, 0.78)";
+
+    }
+
+});
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements = document.querySelectorAll(
+    ".player-card, .fixture-card, .club-card, .stat-box"
+);
+
+const revealObserver = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+
+                entry.target.style.transform =
+                    "translateY(0)";
+
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.15
+    }
+
+);
+
+
+revealElements.forEach(element => {
+
+    element.style.opacity = "0";
+
+    element.style.transform =
+        "translateY(25px)";
+
+    element.style.transition =
+        "opacity 0.7s ease, transform 0.7s ease";
+
+    revealObserver.observe(element);
+
+});
