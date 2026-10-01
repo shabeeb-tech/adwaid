@@ -9,7 +9,7 @@ jobs:
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           source: "."
           target: "/var/www/html"
