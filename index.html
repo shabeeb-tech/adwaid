@@ -4,117 +4,520 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Website</title>
+    <title>Calicut FC | Rise Together</title>
 
-    <!-- CSS File -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">MyWebsite</div>
+    <!-- ================= NAVBAR ================= -->
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="navbar">
+
+        <a href="#" class="brand">
+            <div class="club-logo">
+                CF
+            </div>
+
+            <div class="brand-text">
+                <span>CALICUT</span>
+                <strong>FC</strong>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#club">Club</a>
+            <a href="#squad">Squad</a>
+            <a href="#fixtures">Fixtures</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
 
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div>
-            <h1>Welcome to My Website</h1>
+    <!-- ================= HERO ================= -->
 
-            <p>
-                A simple website created using HTML, CSS and JavaScript.
-            </p>
+    <main>
 
-            <button onclick="showMessage()">Click Me</button>
+        <section class="hero" id="home">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    CALICUT FOOTBALL CLUB
+                </span>
+
+                <h1>
+                    RISE
+                    <span>TOGETHER.</span>
+                </h1>
+
+                <p>
+                    One city. One club. One dream.
+                    Welcome to Calicut FC.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#squad" class="btn btn-primary">
+                        Meet The Squad
+                    </a>
+
+                    <a href="#fixtures" class="btn btn-outline">
+                        View Fixtures
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <div>
+                    <strong>2026</strong>
+                    <span>SEASON</span>
+                </div>
+
+                <div>
+                    <strong>04</strong>
+                    <span>PLAYERS</span>
+                </div>
+
+                <div>
+                    <strong>01</strong>
+                    <span>MISSION</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CLUB ================= -->
+
+        <section class="club-section" id="club">
+
+            <div class="section-heading">
+
+                <span>THE CLUB</span>
+
+                <h2>
+                    MORE THAN
+                    <em>FOOTBALL.</em>
+                </h2>
+
+            </div>
+
+            <div class="club-grid">
+
+                <div class="club-text">
+
+                    <p class="large-text">
+                        Calicut FC represents the passion,
+                        energy and football culture of Calicut.
+                    </p>
+
+                    <p>
+                        Built around teamwork, discipline and
+                        ambition, our club is driven by players
+                        who believe that every match is an
+                        opportunity to create something special.
+                    </p>
+
+                    <a href="#squad" class="text-link">
+                        Explore The Team →
+                    </a>
+
+                </div>
+
+                <div class="club-card">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        OUR<br>
+                        IDENTITY
+                    </h3>
+
+                    <p>
+                        Blue is our colour.
+                        Calicut is our home.
+                        Football is our language.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SQUAD ================= -->
+
+        <section class="squad-section" id="squad">
+
+            <div class="section-heading centered">
+
+                <span>FIRST TEAM</span>
+
+                <h2>
+                    MEET THE
+                    <em>SQUAD.</em>
+                </h2>
+
+                <p>
+                    The players representing Calicut FC.
+                </p>
+
+            </div>
+
+
+            <div class="players-grid">
+
+                <!-- PLAYER 1 -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80"
+                            alt="Shabeeb football player"
+                        >
+
+                        <span class="player-number">
+                            07
+                        </span>
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <span class="position">
+                            FORWARD
+                        </span>
+
+                        <h3>
+                            SHABEEB
+                        </h3>
+
+                        <div class="player-line"></div>
+
+                        <div class="player-meta">
+                            <span>CALICUT FC</span>
+                            <span>#07</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PLAYER 2 -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?auto=format&fit=crop&w=700&q=80"
+                            alt="Asif football player"
+                        >
+
+                        <span class="player-number">
+                            10
+                        </span>
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <span class="position">
+                            MIDFIELDER
+                        </span>
+
+                        <h3>
+                            ASIF
+                        </h3>
+
+                        <div class="player-line"></div>
+
+                        <div class="player-meta">
+                            <span>CALICUT FC</span>
+                            <span>#10</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PLAYER 3 -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=700&q=80"
+                            alt="Shamveel football player"
+                        >
+
+                        <span class="player-number">
+                            08
+                        </span>
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <span class="position">
+                            MIDFIELDER
+                        </span>
+
+                        <h3>
+                            SHAMVEEL
+                        </h3>
+
+                        <div class="player-line"></div>
+
+                        <div class="player-meta">
+                            <span>CALICUT FC</span>
+                            <span>#08</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PLAYER 4 -->
+
+                <article class="player-card">
+
+                    <div class="player-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"
+                            alt="Ashiq football player"
+                        >
+
+                        <span class="player-number">
+                            04
+                        </span>
+
+                    </div>
+
+                    <div class="player-info">
+
+                        <span class="position">
+                            DEFENDER
+                        </span>
+
+                        <h3>
+                            ASHIQ
+                        </h3>
+
+                        <div class="player-line"></div>
+
+                        <div class="player-meta">
+                            <span>CALICUT FC</span>
+                            <span>#04</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FIXTURES ================= -->
+
+        <section class="fixtures-section" id="fixtures">
+
+            <div class="section-heading">
+
+                <span>MATCH CENTRE</span>
+
+                <h2>
+                    UPCOMING
+                    <em>FIXTURES.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="fixture-card">
+
+                <div class="fixture-date">
+
+                    <span>OCT</span>
+
+                    <strong>18</strong>
+
+                    <small>2026</small>
+
+                </div>
+
+                <div class="fixture-team">
+                    <div class="mini-logo">CF</div>
+                    <strong>CALICUT FC</strong>
+                </div>
+
+                <div class="vs">
+                    VS
+                </div>
+
+                <div class="fixture-team">
+                    <div class="opponent-logo">FC</div>
+                    <strong>OPPONENT FC</strong>
+                </div>
+
+                <div class="fixture-info">
+                    <span>19:30</span>
+                    <small>CALICUT STADIUM</small>
+                </div>
+
+            </div>
+
+
+            <div class="fixture-card">
+
+                <div class="fixture-date">
+
+                    <span>NOV</span>
+
+                    <strong>02</strong>
+
+                    <small>2026</small>
+
+                </div>
+
+                <div class="fixture-team">
+                    <div class="mini-logo">CF</div>
+                    <strong>CALICUT FC</strong>
+                </div>
+
+                <div class="vs">
+                    VS
+                </div>
+
+                <div class="fixture-team">
+                    <div class="opponent-logo">FC</div>
+                    <strong>UNITED FC</strong>
+                </div>
+
+                <div class="fixture-info">
+                    <span>20:00</span>
+                    <small>AWAY</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats-section">
+
+            <div class="stat-box">
+                <strong class="counter" data-target="12">0</strong>
+                <span>MATCHES</span>
+            </div>
+
+            <div class="stat-box">
+                <strong class="counter" data-target="28">0</strong>
+                <span>GOALS</span>
+            </div>
+
+            <div class="stat-box">
+                <strong class="counter" data-target="8">0</strong>
+                <span>WINS</span>
+            </div>
+
+            <div class="stat-box">
+                <strong class="counter" data-target="4">0</strong>
+                <span>PLAYERS</span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="contact-section" id="contact">
+
+            <div class="contact-content">
+
+                <span>GET IN TOUCH</span>
+
+                <h2>
+                    JOIN THE
+                    <em>MOVEMENT.</em>
+                </h2>
+
+                <p>
+                    Follow Calicut FC and stay connected
+                    with the club.
+                </p>
+
+                <a href="mailto:calicutfc@example.com"
+                   class="btn btn-primary">
+                    Contact The Club
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <div class="club-logo">
+                CF
+            </div>
+
+            <div>
+                <strong>CALICUT FC</strong>
+                <span>RISE TOGETHER.</span>
+            </div>
+
         </div>
-    </section>
-
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Us</h2>
 
         <p>
-            This is a simple responsive website.
-            HTML is used for structure, CSS for design,
-            and JavaScript for functionality.
+            © 2026 Calicut FC. All Rights Reserved.
         </p>
-    </section>
 
-
-    <!-- Services Section -->
-    <section id="services" class="section services">
-        <h2>Our Services</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Web Design</h3>
-                <p>Creating beautiful and modern websites.</p>
-            </div>
-
-            <div class="card">
-                <h3>Development</h3>
-                <p>Building fast and responsive websites.</p>
-            </div>
-
-            <div class="card">
-                <h3>Support</h3>
-                <p>Providing help and maintenance for websites.</p>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <h2>Contact Us</h2>
-
-        <form onsubmit="submitForm(event)">
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                required
-            >
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-            >
-
-            <textarea
-                id="message"
-                placeholder="Enter your message"
-                required
-            ></textarea>
-
-            <button type="submit">Send Message</button>
-
-        </form>
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 MyWebsite. All Rights Reserved.</p>
     </footer>
 
 
-    <!-- JavaScript File -->
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
